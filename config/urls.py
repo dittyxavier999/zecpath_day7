@@ -41,4 +41,8 @@ urlpatterns = [
 
     # Users API
     path("api/", include("apps.users.urls")),
+    path("api/profiles/", include("profiles.urls")),
+    
+    
+    
 ]
