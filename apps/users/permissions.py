@@ -35,3 +35,27 @@ class IsCandidate(BasePermission):
             request.user.is_authenticated
             and request.user.role == "CANDIDATE"
         )
+
+
+class IsAdminOrCandidate(BasePermission):
+    """
+    Allows access to admin users or candidate users.
+    """
+
+    def has_permission(self, request, view):
+        return (
+            request.user.is_authenticated
+            and request.user.role in ["ADMIN", "CANDIDATE"]
+        )
+
+
+class IsAdminOrEmployer(BasePermission):
+    """
+    Allows access to admin users or employer users.
+    """
+
+    def has_permission(self, request, view):
+        return (
+            request.user.is_authenticated
+            and request.user.role in ["ADMIN", "EMPLOYER"]
+        )

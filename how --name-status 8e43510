@@ -1,0 +1,19 @@
+[33mcommit 8e4351004b2892f3ad778f4061cea68d2e16f113[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelopment[m[33m)[m
+Author: Ditty Xavier <dittyxavier999@gmail.com>
+Date:   Sun Sep 27 15:25:56 2026 +0530
+
+    Implement candidate and employer profile modules
+
+ config/settings.py                  |   1 [32m+[m
+ config/urls.py                      |   4 [32m+[m
+ profiles/__init__.py                |   0
+ profiles/admin.py                   |   3 [32m+[m
+ profiles/apps.py                    |   5 [32m+[m
+ profiles/migrations/0001_initial.py |  45 [32m++++++++[m
+ profiles/migrations/__init__.py     |   0
+ profiles/models.py                  |  53 [32m+++++++++[m
+ profiles/serializers.py             |  54 [32m++++++++++[m
+ profiles/tests.py                   |   3 [32m+[m
+ profiles/urls.py                    |  17 [32m+++[m
+ profiles/views.py                   | 208 [32m++++++++++++++++++++++++++++++++++++[m
+ 12 files changed, 393 insertions(+)
